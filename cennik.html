@@ -18,7 +18,129 @@
               rel="stylesheet">
         <script src="js/pricing.js"></script>
     </head>
+<script>
+// JavaScript pre cenník - všetko v jednom
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    }
 
+    // Client type switching
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const clientDetails = document.getElementById('client-details');
+    const pricingPackages = document.querySelectorAll('.pricing-packages');
+    
+    // Client type data
+    const clientData = {
+        small: {
+            details: [
+                { icon: 'fas fa-euro-sign', text: 'obrat do 100 tisíc eur' },
+                { icon: 'fas fa-file-alt', text: 'do 50 dokladov mesačne' },
+                { icon: 'fas fa-users', text: 'do 5 zamestnancov' }
+            ]
+        },
+        medium: {
+            details: [
+                { icon: 'fas fa-euro-sign', text: 'obrat do 1 milión eur' },
+                { icon: 'fas fa-file-alt', text: 'do 500 dokladov mesačne' },
+                { icon: 'fas fa-users', text: 'do 10 zamestnancov' }
+            ]
+        },
+        large: {
+            details: [
+                { icon: 'fas fa-euro-sign', text: 'obrat nad 1 milión eur' },
+                { icon: 'fas fa-file-alt', text: 'nad 500 dokladov mesačne' },
+                { icon: 'fas fa-users', text: 'nad 10 zamestnancov' }
+            ]
+        }
+    };
+    
+    // Tab switching functionality
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const clientType = this.dataset.client;
+            
+            // Update active tab
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update client details
+            updateClientDetails(clientType);
+            
+            // Show/hide pricing packages with animation
+            updatePricingPackages(clientType);
+        });
+    });
+    
+    function updateClientDetails(clientType) {
+        const data = clientData[clientType];
+        if (data && clientDetails) {
+            clientDetails.innerHTML = data.details.map(detail => `
+                <div class="detail-item">
+                    <i class="${detail.icon}"></i>
+                    <span>${detail.text}</span>
+                </div>
+            `).join('');
+        }
+    }
+    
+    function updatePricingPackages(clientType) {
+        pricingPackages.forEach(packageDiv => {
+            const isTarget = packageDiv.dataset.client === clientType;
+            
+            if (isTarget) {
+                packageDiv.style.display = 'grid';
+                packageDiv.style.opacity = '1';
+            } else {
+                packageDiv.style.display = 'none';
+            }
+        });
+    }
+
+    // Package selection functionality
+    const selectButtons = document.querySelectorAll('.btn-select');
+    
+    selectButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const packageName = this.dataset.package;
+            const price = this.dataset.price;
+            
+            alert('Vybrali ste: ' + packageName + ' za ' + price + '€/mesiac');
+        });
+    });
+
+    // FAQ functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        if (question) {
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        }
+    });
+});
+</script>
     <body>
         <!-- Header -->
         <header class="header"
