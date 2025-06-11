@@ -491,6 +491,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -516,20 +517,20 @@
     .pricing-packages {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    
+
     .table-row {
         grid-template-columns: 1fr;
     }
-    
+
     .table-cell:first-child {
         border-right: none;
         border-bottom: 1px solid rgba(212, 165, 116, 0.2);
     }
-    
+
     .table-header .table-cell:first-child {
         border-bottom-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     .price-cell {
         justify-content: flex-start;
     }
@@ -539,63 +540,63 @@
     .breadcrumb {
         padding: 100px 0 15px;
     }
-    
+
     .pricing-hero {
         padding: 40px 0;
     }
-    
+
     .pricing-hero .section-title {
         font-size: 2.2rem;
     }
-    
+
     .selector-tabs {
         flex-direction: column;
         position: relative;
     }
-    
+
     .client-selector {
         position: relative;
         top: auto;
     }
-    
+
     .tab-button {
         min-width: auto;
         padding: 1rem;
         border-bottom: 1px solid rgba(212, 165, 116, 0.2);
         border-right: none;
     }
-    
+
     .tab-button.active {
         border-bottom-color: rgba(212, 165, 116, 0.2);
         border-left: 3px solid var(--primary-color);
     }
-    
+
     .client-details {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
     }
-    
+
     .pricing-packages {
         grid-template-columns: 1fr;
     }
-    
+
     .pricing-card.popular {
         transform: none;
     }
-    
+
     .pricing-card.popular:hover {
         transform: translateY(-5px);
     }
-    
+
     .card-header {
         padding: 1.5rem;
     }
-    
+
     .card-body {
         padding: 1.5rem;
     }
-    
+
     .amount {
         font-size: 2rem;
     }
@@ -605,25 +606,25 @@
     .pricing-content {
         padding: 2rem 0;
     }
-    
+
     .tab-button {
         flex-direction: column;
         gap: 5px;
         text-align: center;
     }
-    
+
     .card-header h3 {
         font-size: 1.1rem;
     }
-    
+
     .amount {
         font-size: 1.8rem;
     }
-    
+
     .table-cell {
         padding: 1rem;
     }
-    
+
     .modal-content {
         margin: 15% auto;
         padding: 1.5rem;
