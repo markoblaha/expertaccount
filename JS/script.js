@@ -343,4 +343,132 @@ function showNotification(message, type = 'info') {
         success: { bg: '#d4edda', text: '#155724', border: '#c3e6cb' },
         error: { bg: '#f8d7da', text: '#721c24', border: '#f5c6cb' },
         warning: { bg: '#fff3cd', text: '#856404', border: '#ffeaa7' },
-        info: { bg: '#d1ecf1', text: '#0c5460
+        info: { bg: '#d1ecf1', text: '#0c5460', border: '#bee5eb' }
+    };
+    
+    const colors = colorMap[type];
+    
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas ${iconMap[type]}"></i>
+            <span>${message}</span>
+            <button class="notification-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+    
+    // Add styles
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${colors.bg};
+        color: ${colors.text};
+        border: 1px solid ${colors.border};
+        border-radius: 10px;
+        padding: 15px 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 10000;
+        max-width: 400px;
+        animation: slideInRight 0.3s ease;
+    `;
+    
+    // Add animation styles if not already present
+    if (!document.querySelector('#notification-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notification-styles';
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            .notification-content {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .notification-close {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                margin-left: auto;
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+                color: inherit;
+            }
+            
+            .notification-close:hover {
+                opacity: 1;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(notification);
+    
+    // Close button functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        notification.remove();
+    });
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.remove();
+        }
+    }, 5000);
+}
+
+// Global function to open contact modal with package info
+function openContactModal(packageName, price) {
+    const modal = document.getElementById('contact-modal');
+    const selectedPackageSpan = document.getElementById('selected-package');
+    const packageInput = document.getElementById('modal-package');
+    
+    if (modal && selectedPackageSpan && packageInput) {
+        selectedPackageSpan.textContent = packageName;
+        packageInput.value = `${packageName} - ${price}€/mesiac`;
+        modal.style.display = 'block';
+        
+        // Focus first input
+        const firstInput = modal.querySelector('input[name="name"]');
+        if (firstInput) {
+            setTimeout(() => firstInput.focus(), 100);
+        }
+    }
+}
+
+// Initialize loading state styles
+const loadingStyles = document.createElement('style');
+loadingStyles.textContent = `
+    body:not(.loaded) .hero-content {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease;
+    }
+    
+    .loaded .hero-content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    body:not(.loaded) * {
+        animation-play-state: paused !important;
+    }
+    
+    .loaded * {
+        animation-play-state: running !important;
+    }
+`;
+document.head.appendChild(loadingStyles);
