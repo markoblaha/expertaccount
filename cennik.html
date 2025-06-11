@@ -1,655 +1,577 @@
 <!DOCTYPE html>
 <html lang="sk">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
-        <title>Cenník - ExpertAccount</title>
-        <meta name="description"
-              content="Transparentné ceny za profesionálne účtovnícke služby. Vyberte si balíček podľa veľkosti vašej firmy.">
-        <link rel="stylesheet"
-              href="css/style.css">
-        <link rel="stylesheet"
-              href="css/pricing.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-              rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-              rel="stylesheet">
-    </head>
-
-    <body>
-        <!-- Header -->
-        <header class="header"
-                id="header">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="nav-brand">
-                        <a href="index.html"
-                           class="logo">
-                            <div class="logo-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <span class="logo-text">ExpertAccount</span>
-                            <span class="logo-subtitle">účtovníctvo</span>
-                        </a>
-                    </div>
-                    <div class="nav-menu"
-                         id="nav-menu">
-                        <ul class="nav-list">
-                            <li><a href="index.html#home"
-                                   class="nav-link">O nás</a></li>
-                            <li><a href="index.html#services"
-                                   class="nav-link">Služby</a></li>
-                            <li><a href="cennik.html"
-                                   class="nav-link active">Cenník</a></li>
-                            <li><a href="referencie.html"
-                                   class="nav-link">Referencie</a></li>
-                            <li><a href="clanky.html"
-                                   class="nav-link">Články</a></li>
-                            <li><a href="index.html#contact"
-                                   class="nav-link">Kontakt</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-cta">
-                        <a href="index.html#contact"
-                           class="btn-cta">
-                            <i class="fas fa-user"></i>
-                            Bezplatná konzultácia
-                        </a>
-                    </div>
-                    <div class="nav-toggle"
-                         id="nav-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Breadcrumb -->
-        <section class="breadcrumb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenník - ExpertAccount</title>
+    <meta name="description" content="Transparentné ceny za profesionálne účtovnícke služby. Vyberte si balíček podľa veľkosti vašej firmy.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
             <div class="container">
-                <div class="breadcrumb-content">
-                    <a href="index.html"><i class="fas fa-home"></i></a>
-                    <span><i class="fas fa-chevron-right"></i></span>
-                    <span>Cenník</span>
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="logo-text">ExpertAccount</span>
+                        <span class="logo-subtitle">účtovníctvo</span>
+                    </a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html#home" class="nav-link">O nás</a></li>
+                        <li><a href="index.html#services" class="nav-link">Služby</a></li>
+                        <li><a href="cennik.html" class="nav-link active">Cenník</a></li>
+                        <li><a href="referencie.html" class="nav-link">Referencie</a></li>
+                        <li><a href="clanky.html" class="nav-link">Články</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="nav-cta">
+                    <a href="index.html#contact" class="btn-cta">
+                        <i class="fas fa-user"></i>
+                        Bezplatná konzultácia
+                    </a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-        </section>
+        </nav>
+    </header>
 
-        <!-- Pricing Hero -->
-        <section class="pricing-hero">
-            <div class="container">
-                <div class="pricing-hero-content">
-                    <h1 class="section-title">Cenník</h1>
-                    <p class="section-subtitle">
-                        Transparentné ceny bez skrytých poplatkov. Vyberte si balíček, ktorý najlepšie vyhovuje vašej
-                        firme.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Client Type Selector -->
-        <section class="client-selector">
-            <div class="container">
-                <div class="selector-tabs">
-                    <button class="tab-button active"
-                            data-client="small">
-                        <i class="fas fa-coins"></i>
-                        <span>Malý klient</span>
-                        <small>obrat do 100 tisíc eur</small>
-                    </button>
-                    <button class="tab-button"
-                            data-client="medium">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Stredný klient</span>
-                        <small>obrat do 1 milión eur</small>
-                    </button>
-                    <button class="tab-button"
-                            data-client="large">
-                        <i class="fas fa-building"></i>
-                        <span>Veľký klient</span>
-                        <small>obrat nad 1 milión eur</small>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Content -->
-        <section class="pricing-content">
-            <div class="container">
-                <!-- Client Info -->
-                <div class="client-info">
-                    <div class="client-details"
-                         id="client-details">
-                        <div class="detail-item">
-                            <i class="fas fa-euro-sign"></i>
-                            <span>obrat do 100 tisíc eur</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-file-alt"></i>
-                            <span>do 50 dokladov mesačne</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-users"></i>
-                            <span>do 5 zamestnancov</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pricing Grid -->
-                <div class="pricing-grid"
-                     id="pricing-grid">
-                    <!-- Small Client Packages -->
-                    <div class="pricing-packages"
-                         data-client="small">
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Vedenie účtovníctva</h3>
-                                <div class="price">
-                                    <span class="amount">150 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Vedenie účtovníctva - Malý klient"
-                                    data-price="150">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Vedenie účtovníctva a spracovanie miezd</h3>
-                                <div class="price">
-                                    <span class="amount">225 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Vedenie účtovníctva a spracovanie miezd - Malý klient"
-                                    data-price="225">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Komplexné ekonomické riešenie</h3>
-                                <div class="price">
-                                    <span class="amount">375 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                    <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Komplexné ekonomické riešenie - Malý klient"
-                                    data-price="375">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Komplexné biznis riešenie</h3>
-                                <div class="price">
-                                    <span class="amount">675 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                    <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
-                                    <li><i class="fas fa-check"></i> Biznis konzultácie</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Komplexné biznis riešenie - Malý klient"
-                                    data-price="675">
-                                Mám záujem
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Medium Client Packages -->
-                    <div class="pricing-packages"
-                         data-client="medium"
-                         style="display: none;">
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Vedenie účtovníctva</h3>
-                                <div class="price">
-                                    <span class="amount">450 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Vedenie účtovníctva - Stredný klient"
-                                    data-price="450">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Vedenie účtovníctva a spracovanie miezd</h3>
-                                <div class="price">
-                                    <span class="amount">600 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Vedenie účtovníctva a spracovanie miezd - Stredný klient"
-                                    data-price="600">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card popular">
-                            <div class="popular-badge">Najpopulárnejšie</div>
-                            <div class="card-header">
-                                <h3>Komplexné ekonomické riešenie</h3>
-                                <div class="price">
-                                    <span class="amount">1050 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                    <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Komplexné ekonomické riešenie - Stredný klient"
-                                    data-price="1050">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Komplexné biznis riešenie</h3>
-                                <div class="price">
-                                    <span class="amount">1950 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                    <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
-                                    <li><i class="fas fa-check"></i> Biznis konzultácie</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Komplexné biznis riešenie - Stredný klient"
-                                    data-price="1950">
-                                Mám záujem
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Large Client Packages -->
-                    <div class="pricing-packages"
-                         data-client="large"
-                         style="display: none;">
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Vedenie účtovníctva</h3>
-                                <div class="price">
-                                    <span class="amount">1050 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Vedenie účtovníctva - Veľký klient"
-                                    data-price="1050">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Vedenie účtovníctva a spracovanie miezd</h3>
-                                <div class="price">
-                                    <span class="amount">1500 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Vedenie účtovníctva a spracovanie miezd - Veľký klient"
-                                    data-price="1500">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card">
-                            <div class="card-header">
-                                <h3>Komplexné ekonomické riešenie</h3>
-                                <div class="price">
-                                    <span class="amount">2550 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                    <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Komplexné ekonomické riešenie - Veľký klient"
-                                    data-price="2550">
-                                Mám záujem
-                            </button>
-                        </div>
-
-                        <div class="pricing-card popular">
-                            <div class="popular-badge">Odporúčané</div>
-                            <div class="card-header">
-                                <h3>Komplexné biznis riešenie</h3>
-                                <div class="price">
-                                    <span class="amount">4650 €</span>
-                                    <span class="period">/mesačne</span>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-description">Paušál obsahuje</p>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
-                                    <li><i class="fas fa-check"></i> Spracovanie miezd</li>
-                                    <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
-                                    <li><i class="fas fa-check"></i> Biznis konzultácie</li>
-                                </ul>
-                            </div>
-                            <button class="btn-select"
-                                    data-package="Komplexné biznis riešenie - Veľký klient"
-                                    data-price="4650">
-                                Mám záujem
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Services -->
-        <section class="additional-services">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Dodatočné služby</h2>
-                    <p class="section-subtitle">Rozšírte svoj balíček podľa potrieb</p>
-                </div>
-
-                <div class="services-table">
-                    <div class="table-row table-header">
-                        <div class="table-cell">Služba</div>
-                        <div class="table-cell">Cena</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <strong>Založenie s.r.o.</strong><br>
-                            <small>Kompletné založenie spoločnosti vrátane všetkých úkonov</small>
-                        </div>
-                        <div class="table-cell price-cell">399 €</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <strong>Účtovná závierka</strong><br>
-                            <small>Riadna alebo mimoriadna účtovná závierka</small>
-                        </div>
-                        <div class="table-cell price-cell">od 299 €</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <strong>Daňové priznanie FO</strong><br>
-                            <small>Vypracovanie daňového priznania pre fyzickú osobu</small>
-                        </div>
-                        <div class="table-cell price-cell">59 €</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <strong>Finančná analýza</strong><br>
-                            <small>Podrobná analýza finančného zdravia firmy</small>
-                        </div>
-                        <div class="table-cell price-cell">149 €</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <strong>Konzultácia</strong><br>
-                            <small>Hodina poradenstva s naším expertom</small>
-                        </div>
-                        <div class="table-cell price-cell">59 €/hod</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Často kladené otázky</h2>
-                    <p class="section-subtitle">Odpovede na najčastejšie otázky o cenníku</p>
-                </div>
-
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Ako sa určuje kategória klienta?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Kategória sa určuje podľa ročného obratu firmy, počtu dokladov a zamestnancov. Ak ste na
-                                hranici kategórií, môžeme prispôsobiť ponuku individuálne.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Sú v cenách zahrnuté všetky služby?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Áno, uvedené ceny sú konečné a zahŕňają všetky služby uvedené v balíčku. Bez skrytých
-                                poplatkov či príplatkov.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Môžem zmeniť balíček počas roka?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Samozrejme. Balíček môžete kedykoľvek upgradovať alebo downgradovať podľa aktuálnych
-                                potrieb vašej firmy.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Aká je výpovedná lehota?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Výpovedná lehota je 1 mesiac. Vždy sa snažíme nájsť riešenie, ktoré vyhovuje obom
-                                stranám.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Potrebujete individuálnu ponuku?</h2>
-                    <p>Každá firma je jedinečná. Pripravíme vám cenový balíček presne podľa vašich potrieb.</p>
-                    <div class="cta-buttons">
-                        <a href="index.html#contact"
-                           class="btn btn-primary">Bezplatná konzultácia</a>
-                        <a href="tel:+421905123456"
-                           class="btn btn-secondary">Zavolajte nám</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <div class="footer-logo">
-                            <div class="logo-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <span class="logo-text">ExpertAccount</span>
-                        </div>
-                        <p>Profesionálne účtovníctvo s pridanou hodnotou. Pomáhame podnikateľom dosiahnuť finančný
-                            úspech.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Služby</h4>
-                        <ul>
-                            <li><a href="index.html#services">Vedenie účtovníctva</a></li>
-                            <li><a href="index.html#services">Daňová optimalizácia</a></li>
-                            <li><a href="index.html#services">Mzdové účtovníctvo</a></li>
-                            <li><a href="index.html#services">Finančné poradenstvo</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Spoločnosť</h4>
-                        <ul>
-                            <li><a href="index.html#home">O nás</a></li>
-                            <li><a href="cennik.html">Cenník</a></li>
-                            <li><a href="referencie.html">Referencie</a></li>
-                            <li><a href="clanky.html">Články</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Kontakt</h4>
-                        <div class="contact-info">
-                            <p><i class="fas fa-phone"></i> +421 905 123 456</p>
-                            <p><i class="fas fa-envelope"></i> info@expertaccount.sk</p>
-                            <p><i class="fas fa-map-marker-alt"></i> Hlavná 123, Bratislava</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 ExpertAccount. Všetky práva vyhradené.</p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Contact Modal -->
-        <div class="modal"
-             id="contact-modal">
-            <div class="modal-content">
-                <span class="modal-close">&times;</span>
-                <h3>Kontaktujte nás</h3>
-                <p class="modal-subtitle">Vybraný balíček: <span id="selected-package"></span></p>
-                <form class="modal-form"
-                      id="modal-contact-form">
-                    <div class="form-group">
-                        <input type="text"
-                               name="name"
-                               placeholder="Vaše meno *"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email"
-                               name="email"
-                               placeholder="Váš email *"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel"
-                               name="phone"
-                               placeholder="Telefónne číslo">
-                    </div>
-                    <div class="form-group">
-                        <input type="text"
-                               name="package"
-                               id="modal-package"
-                               readonly>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message"
-                                  placeholder="Vaša správa alebo doplňujúce otázky"
-                                  rows="4"></textarea>
-                    </div>
-                    <button type="submit"
-                            class="btn btn-primary">Odoslať správu</button>
-                </form>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Cenník</span>
             </div>
         </div>
+    </section>
 
-        <script src="js/script.js"></script>
-        <script src="js/pricing.js"></script>
-    </body>
+    <!-- Pricing Hero -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="pricing-hero-content">
+                <h1 class="section-title">Cenník</h1>
+                <p class="section-subtitle">
+                    Transparentné ceny bez skrytých poplatkov. Vyberte si balíček, ktorý najlepšie vyhovuje vašej firme.
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Client Type Selector -->
+    <section class="client-selector">
+        <div class="container">
+            <div class="selector-tabs">
+                <button class="tab-button active" data-client="small">
+                    <i class="fas fa-coins"></i>
+                    <span>Malý klient</span>
+                    <small>obrat do 100 tisíc eur</small>
+                </button>
+                <button class="tab-button" data-client="medium">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Stredný klient</span>
+                    <small>obrat do 1 milión eur</small>
+                </button>
+                <button class="tab-button" data-client="large">
+                    <i class="fas fa-building"></i>
+                    <span>Veľký klient</span>
+                    <small>obrat nad 1 milión eur</small>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Content -->
+    <section class="pricing-content">
+        <div class="container">
+            <!-- Client Info -->
+            <div class="client-info">
+                <div class="client-details" id="client-details">
+                    <div class="detail-item">
+                        <i class="fas fa-euro-sign"></i>
+                        <span>obrat do 100 tisíc eur</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>do 50 dokladov mesačne</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-users"></i>
+                        <span>do 5 zamestnancov</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="pricing-grid" id="pricing-grid">
+                <!-- Small Client Packages -->
+                <div class="pricing-packages" data-client="small">
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Vedenie účtovníctva</h3>
+                            <div class="price">
+                                <span class="amount">150 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Vedenie účtovníctva - Malý klient" data-price="150">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Vedenie účtovníctva a spracovanie miezd</h3>
+                            <div class="price">
+                                <span class="amount">225 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Vedenie účtovníctva a spracovanie miezd - Malý klient" data-price="225">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Komplexné ekonomické riešenie</h3>
+                            <div class="price">
+                                <span class="amount">375 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                                <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Komplexné ekonomické riešenie - Malý klient" data-price="375">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Komplexné biznis riešenie</h3>
+                            <div class="price">
+                                <span class="amount">675 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                                <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
+                                <li><i class="fas fa-check"></i> Biznis konzultácie</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Komplexné biznis riešenie - Malý klient" data-price="675">
+                            Mám záujem
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Medium Client Packages -->
+                <div class="pricing-packages" data-client="medium" style="display: none;">
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Vedenie účtovníctva</h3>
+                            <div class="price">
+                                <span class="amount">450 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Vedenie účtovníctva - Stredný klient" data-price="450">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Vedenie účtovníctva a spracovanie miezd</h3>
+                            <div class="price">
+                                <span class="amount">600 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Vedenie účtovníctva a spracovanie miezd - Stredný klient" data-price="600">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Najpopulárnejšie</div>
+                        <div class="card-header">
+                            <h3>Komplexné ekonomické riešenie</h3>
+                            <div class="price">
+                                <span class="amount">1050 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                                <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Komplexné ekonomické riešenie - Stredný klient" data-price="1050">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Komplexné biznis riešenie</h3>
+                            <div class="price">
+                                <span class="amount">1950 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                                <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
+                                <li><i class="fas fa-check"></i> Biznis konzultácie</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Komplexné biznis riešenie - Stredný klient" data-price="1950">
+                            Mám záujem
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Large Client Packages -->
+                <div class="pricing-packages" data-client="large" style="display: none;">
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Vedenie účtovníctva</h3>
+                            <div class="price">
+                                <span class="amount">1050 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Vedenie účtovníctva - Veľký klient" data-price="1050">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Vedenie účtovníctva a spracovanie miezd</h3>
+                            <div class="price">
+                                <span class="amount">1500 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Vedenie účtovníctva a spracovanie miezd - Veľký klient" data-price="1500">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Komplexné ekonomické riešenie</h3>
+                            <div class="price">
+                                <span class="amount">2550 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                                <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Komplexné ekonomické riešenie - Veľký klient" data-price="2550">
+                            Mám záujem
+                        </button>
+                    </div>
+
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Odporúčané</div>
+                        <div class="card-header">
+                            <h3>Komplexné biznis riešenie</h3>
+                            <div class="price">
+                                <span class="amount">4650 €</span>
+                                <span class="period">/mesačne</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">Paušál obsahuje</p>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Vedenie účtovníctva</li>
+                                <li><i class="fas fa-check"></i> Spracovanie miezd</li>
+                                <li><i class="fas fa-check"></i> Riadenie ekonomiky</li>
+                                <li><i class="fas fa-check"></i> Biznis konzultácie</li>
+                            </ul>
+                        </div>
+                        <button class="btn-select" data-package="Komplexné biznis riešenie - Veľký klient" data-price="4650">
+                            Mám záujem
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="additional-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dodatočné služby</h2>
+                <p class="section-subtitle">Rozšírte svoj balíček podľa potrieb</p>
+            </div>
+            
+            <div class="services-table">
+                <div class="table-row table-header">
+                    <div class="table-cell">Služba</div>
+                    <div class="table-cell">Cena</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>Založenie s.r.o.</strong><br>
+                        <small>Kompletné založenie spoločnosti vrátane všetkých úkonov</small>
+                    </div>
+                    <div class="table-cell price-cell">399 €</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>Účtovná závierka</strong><br>
+                        <small>Riadna alebo mimoriadna účtovná závierka</small>
+                    </div>
+                    <div class="table-cell price-cell">od 299 €</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>Daňové priznanie FO</strong><br>
+                        <small>Vypracovanie daňového priznania pre fyzickú osobu</small>
+                    </div>
+                    <div class="table-cell price-cell">59 €</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>Finančná analýza</strong><br>
+                        <small>Podrobná analýza finančného zdravia firmy</small>
+                    </div>
+                    <div class="table-cell price-cell">149 €</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <strong>Konzultácia</strong><br>
+                        <small>Hodina poradenstva s naším expertom</small>
+                    </div>
+                    <div class="table-cell price-cell">59 €/hod</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Často kladené otázky</h2>
+                <p class="section-subtitle">Odpovede na najčastejšie otázky o cenníku</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Ako sa určuje kategória klienta?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kategória sa určuje podľa ročného obratu firmy, počtu dokladov a zamestnancov. Ak ste na hranici kategórií, môžeme prispôsobiť ponuku individuálne.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Sú v cenách zahrnuté všetky služby?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Áno, uvedené ceny sú konečné a zahŕňają všetky služby uvedené v balíčku. Bez skrytých poplatkov či príplatkov.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Môžem zmeniť balíček počas roka?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Samozrejme. Balíček môžete kedykoľvek upgradovať alebo downgradovať podľa aktuálnych potrieb vašej firmy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Aká je výpovedná lehota?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Výpovedná lehota je 1 mesiac. Vždy sa snažíme nájsť riešenie, ktoré vyhovuje obom stranám.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Potrebujete individuálnu ponuku?</h2>
+                <p>Každá firma je jedinečná. Pripravíme vám cenový balíček presne podľa vašich potrieb.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Bezplatná konzultácia</a>
+                    <a href="tel:+421905123456" class="btn btn-secondary">Zavolajte nám</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="logo-text">ExpertAccount</span>
+                    </div>
+                    <p>Profesionálne účtovníctvo s pridanou hodnotou. Pomáhame podnikateľom dosiahnuť finančný úspech.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Služby</h4>
+                    <ul>
+                        <li><a href="index.html#services">Vedenie účtovníctva</a></li>
+                        <li><a href="index.html#services">Daňová optimalizácia</a></li>
+                        <li><a href="index.html#services">Mzdové účtovníctvo</a></li>
+                        <li><a href="index.html#services">Finančné poradenstvo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Spoločnosť</h4>
+                    <ul>
+                        <li><a href="index.html#home">O nás</a></li>
+                        <li><a href="cennik.html">Cenník</a></li>
+                        <li><a href="referencie.html">Referencie</a></li>
+                        <li><a href="clanky.html">Články</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +421 905 123 456</p>
+                        <p><i class="fas fa-envelope"></i> info@expertaccount.sk</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Hlavná 123, Bratislava</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ExpertAccount. Všetky práva vyhradené.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Kontaktujte nás</h3>
+            <p class="modal-subtitle">Vybraný balíček: <span id="selected-package"></span></p>
+            <form class="modal-form" id="modal-contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Vaše meno *" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Váš email *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Telefónne číslo">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="package" id="modal-package" readonly>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Vaša správa alebo doplňujúce otázky" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Odoslať správu</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/pricing.js"></script>
+</body>
 </html>
